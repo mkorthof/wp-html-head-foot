@@ -1,7 +1,12 @@
+
 # WordPress Plugin: HTML In Header-Footer
 
 Embed HTML in Header or Footer of Page. Uses the Plugin Editor to make changes.
 Uses the Plugin Editor to make changes.
+
+## Installation:
+
+Upload ```html-head-foot.php``` to ```wp-content/plugins```.
 
 ## Configuration:
 
