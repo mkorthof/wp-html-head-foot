@@ -5,7 +5,9 @@ Uses the Plugin Editor to make changes.
 
 ## Configuration:
 
-Use echo to add html to:
+Goto the Plugins page, look for "HTML In Header-Footer" and click "Deactivate and Edit".
+
+Use 'echo' to add HTML to head and footer:
 - ```function insert_footer()```
 - ```function insert_head()```
 
