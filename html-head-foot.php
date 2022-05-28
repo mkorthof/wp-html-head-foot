@@ -16,7 +16,7 @@
 // EXAMPLE: echo '<html><!-- html to insert goes here --><br></html>' . "\n";
 
 function insert_head() {
-    echo '<!-- Font source: nt10h.org -->' . "\n";
+    echo '<!-- html to insert goes here -->';
 }
 
 // Same for Footer
@@ -25,13 +25,15 @@ function insert_footer() {
     echo '<!-- html to insert goes here -->';
 }
 
-// Comment to enable and/or disable Header and/or Footer
+// Comment add_action to enable and/or disable Header and/or Footer
 
-add_action('wp_head', 'insert_head', '1');
-//add_action('wp_footer', 'insert_footer', '1');
+if ( ! defined( 'REST_REQUEST' ) ) {
+  //add_action('wp_head', 'insert_head', '1');
+  add_action('wp_footer', 'insert_footer', '1');
+}
 
-// END OF CONFIGUTION
-// ------------------
+// END OF CONFIGURATION
+// --------------------
 
 function plugin_add_action_links( $links ) {
     $settings_link = '<a href="'.admin_url() . '?edit-hihf' . '">'. __( 'Deactivate and Edit' ) .'</a>';
